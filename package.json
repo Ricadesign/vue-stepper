@@ -1,0 +1,23 @@
+{
+  "name": "vue-stepper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "files": [
+    "dist/main.min.js",
+    "dist/_steps.scss"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "babel-loader": "^8.2.2",
+    "vue-loader": "^15.9.5",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^4.44.2"
+  }
+}
