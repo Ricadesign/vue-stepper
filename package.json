@@ -1,6 +1,6 @@
 {
   "name": "@ricadesign/vue-stepper",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Vue stepper component to be used with Vuex and Vue Router",
   "main": "dist/main.min.js",
   "scripts": {
