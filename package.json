@@ -1,7 +1,7 @@
 {
   "name": "@ricadesign/vue-stepper",
   "version": "1.0.0",
-  "description": "",
+  "description": "Vue stepper component to be used with Vuex and Vue Router",
   "main": "dist/main.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
