@@ -63,6 +63,7 @@ export default {
       immediate: true,
       handler(to, from) {
         this.$store.commit('steps/setCurrentStepIndex', to.name)
+        this.updateMaxIndex();
       },
     },
   },
@@ -79,10 +80,10 @@ export default {
     goToRoute(step, index) {
       this.$router.push({ name: step.name }).catch(() => {})
     },
-  },
-  updated() {
-    if (this.currentStep > this.maxIndex) {
-      this.$store.commit('steps/setStepsMaxIndex', this.$route.name)
+    updateMaxIndex() {
+      if (this.currentStep > this.maxIndex) {
+        this.$store.commit('steps/setStepsMaxIndex', this.$route.name)
+      }
     }
   },
   mounted() {
