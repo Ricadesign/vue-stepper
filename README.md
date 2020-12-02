@@ -18,7 +18,7 @@ Vue.use(Stepper { store, routes })
 <stepper></stepper>
 ```
 
-#### Styling:
+### Styling:
 ```scss
 @import '~@ricadesign/vue-stepper/dist/stepper';
 ```
@@ -38,6 +38,6 @@ An image route may also be passed. It will be shown instead of the number once a
 |:-------------:|:-------------:|
 | image | String |
 
-#### Changing maxIndex:
+### Changing maxIndex:
 
-Use `this.$stepper.setMaxIndex(routeName)` to change the max index allowed as needed
+If needed, use `this.$store.commit('steps/setStepsMaxIndex', routeName)` to change the max index allowed to be navigated to.

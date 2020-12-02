@@ -10,7 +10,7 @@
   "license": "ISC",
   "files": [
     "dist/main.min.js",
-    "dist/_steps.scss"
+    "dist/_stepper.scss"
   ],
   "devDependencies": {
     "@babel/core": "^7.12.9",

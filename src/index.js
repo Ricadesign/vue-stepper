@@ -21,7 +21,7 @@ const mutations = {
 
 export default {
   install(Vue, { store, routes }) {
-    if (! store || ! routes) {
+    if (!store || !routes) {
       throw new Exception('You must provide a store and some routes!')
       return
     }
@@ -33,14 +33,5 @@ export default {
     })
 
     Vue.component('stepper', Stepper)
-
-    Vue.prototype.$stepper = {
-      setCurrentIndex(routeName) {
-        this.$store.commit('steps/setCurrentStepIndex', routeName)
-      },
-      setMaxIndex(routeName) {
-        this.$store.commit('steps/setStepsMaxIndex', routeName)
-      },
-    }
   },
 }
