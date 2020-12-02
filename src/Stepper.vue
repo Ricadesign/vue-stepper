@@ -62,7 +62,7 @@ export default {
     $route: {
       immediate: true,
       handler(to, from) {
-        this.setCurrentStepIndex(to.name)
+        this.$stepper.setCurrentIndex(to.name)
       },
     },
   },
@@ -81,7 +81,7 @@ export default {
     },
   },
   updated() {
-    this.currentStep > this.maxIndex && this.setStepsMaxIndex(this.currentStep)
+    this.currentStep > this.maxIndex && this.$stepper.setMaxIndex(this.currentStep)
   },
   mounted() {
     const stepper = document.querySelector('#vue-stepper-component')
