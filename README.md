@@ -19,6 +19,7 @@ Vue.use(Stepper { store, routes })
 ```
 
 ### Styling:
+
 ```scss
 @import '~@ricadesign/vue-stepper/dist/stepper';
 ```

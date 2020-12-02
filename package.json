@@ -19,5 +19,9 @@
     "vue-loader": "^15.9.5",
     "vue-template-compiler": "^2.6.12",
     "webpack": "^4.44.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ricadesign/vue-stepper.git"
   }
 }
