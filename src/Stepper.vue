@@ -1,5 +1,5 @@
 <template>
-  <div class="vue-stepper-component" :class="{ 'with-gradient': secondaryColor }">
+  <div id="vue-stepper-component" :class="{ 'with-gradient': secondaryColor }">
     <span class="line"></span>
     <div
       v-for="(step, index) in steps"
@@ -84,7 +84,7 @@ export default {
     this.currentStep > this.maxIndex && this.setStepsMaxIndex(this.currentStep)
   },
   mounted() {
-    const stepper = document.querySelector('.wizard-steps')
+    const stepper = document.querySelector('#vue-stepper-component')
     const props = ['primaryColor', 'secondaryColor', 'textColorPrimary', 'textColorSecondary']
 
     for (let prop of props) {
