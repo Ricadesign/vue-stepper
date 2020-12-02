@@ -34,15 +34,13 @@ export default {
 
     Vue.component('stepper', Stepper)
 
-    Vue.mixin({
-      methods: {
-        setCurrentStepIndex(routeName) {
-          this.$store.commit('steps/setCurrentStepIndex', routeName)
-        },
-        setStepsMaxIndex(routeName) {
-          this.$store.commit('steps/setStepsMaxIndex', routeName)
-        },
+    Vue.prototype.$stepper = {
+      setCurrentIndex(routeName) {
+        this.$store.commit('steps/setCurrentStepIndex', routeName)
       },
-    })
+      setMaxIndex(routeName) {
+        this.$store.commit('steps/setStepsMaxIndex', routeName)
+      },
+    }
   },
 }
