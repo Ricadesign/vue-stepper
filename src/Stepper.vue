@@ -12,7 +12,7 @@
         disabled: stepIsDisabled(index),
         'with-image': image
       }"
-      @click="goToRoute(step, index)"
+      @click="$emit('step-click', step.name)"
     >
       <div class="inner-circle"></div>
       <div class="bullet">{{ index + 1 }}</div>
@@ -76,9 +76,6 @@ export default {
     },
     stepIsActive(step) {
       return this.$route.name === step.name
-    },
-    goToRoute(step, index) {
-      this.$router.push({ name: step.name }).catch(() => {})
     },
     updateMaxIndex() {
       if (this.currentStep > this.maxIndex) {

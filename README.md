@@ -17,7 +17,6 @@ Vue.use(Stepper { store, routes })
 ```html
 <stepper></stepper>
 ```
-
 ### Styling:
 
 ```scss
@@ -26,18 +25,25 @@ Vue.use(Stepper { store, routes })
 
 You can pass the following color props to style the stepper. When using both primary and secondary colors, a background gradient will be shown.
 
-| Prop        | Type           |
-|:-------------:|:-------------:|
-| primary-color | String |
-| secondary-color | String |
-| text-color-primary | String |
+| Prop                 | Type   |
+|:--------------------:|:------:|
+| primary-color        | String |
+| secondary-color      | String |
+| text-color-primary   | String |
 | text-color-secondary | String |
 
 An image route may also be passed. It will be shown instead of the number once a step is completed:
 
-| Prop        | Type           |
-|:-------------:|:-------------:|
+| Prop  | Type   |
+|:-----:|:------:|
 | image | String |
+
+
+### Events emitted:
+
+| Event      | Params (type)       |
+|:----------:|:-------------------:|
+| step-click | routeName (String) |
 
 ### Changing maxIndex:
 
