@@ -83,6 +83,8 @@
 
     &.activated {
       border-radius: 50%;
+      background-color: var(--primaryColor);
+
       .bullet {
         color: white;
       }

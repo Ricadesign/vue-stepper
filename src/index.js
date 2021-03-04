@@ -1,4 +1,5 @@
 import Stepper from './Stepper.vue'
+import './_styles.scss';
 
 const state = (steps) => () => ({
   steps,
@@ -32,6 +33,6 @@ export default {
       mutations,
     })
 
-    Vue.component('stepper', Stepper)
+    Vue.component('rica-vue-stepper', Stepper)
   },
 }

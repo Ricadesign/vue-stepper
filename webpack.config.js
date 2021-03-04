@@ -1,4 +1,7 @@
 const path = require('path')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = function (env) {
@@ -18,9 +21,17 @@ module.exports = function (env) {
         {
           test: /\.vue$/,
           use: ['vue-loader'],
-        }
+        },
+        {
+          test: /\.scss/,
+          use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        },
       ],
     },
-    plugins: [new VueLoaderPlugin()],
+    plugins: [new VueLoaderPlugin(), new MiniCssExtractPlugin()],
+    optimization: {
+      minimize: true,
+      minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
+    },
   }
 }

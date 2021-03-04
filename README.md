@@ -15,7 +15,7 @@ Vue.use(Stepper, { store, routes })
 ```
 
 ```html
-<stepper></stepper>
+<rica-vue-stepper></rica-vue-stepper>
 ```
 ### Styling:
 
