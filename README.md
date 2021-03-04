@@ -11,7 +11,7 @@ npm install @ricadesign/vue-stepper
 
 ```javascript
 import Stepper from '@ricadesign/vue-stepper'
-Vue.use(Stepper { store, routes })
+Vue.use(Stepper, { store, routes })
 ```
 
 ```html
