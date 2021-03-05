@@ -1,10 +1,10 @@
-import Stepper from './Stepper.vue'
-import './_styles.scss';
+import RicaVueStepper from './RicaVueStepper.vue'
 
 const state = (steps) => () => ({
   steps,
   currentStepIndex: 0,
   maxStepIndex: 0,
+  stepNavigationIsDisabled: false,
 })
 
 const mutations = {
@@ -18,6 +18,9 @@ const mutations = {
       (route) => route.name === routeName
     )
   },
+  disableStepsNavigation(state) {
+    state.stepNavigationIsDisabled = true;
+  }
 }
 
 export default {
@@ -33,6 +36,6 @@ export default {
       mutations,
     })
 
-    Vue.component('rica-vue-stepper', Stepper)
+    Vue.component('rica-vue-stepper', RicaVueStepper)
   },
 }
